@@ -1,7 +1,6 @@
 package ro.razvan.rxjava.LearningRxJava.Ch1
 
 import io.reactivex.Observable
-import io.reactivex.Observer
 import ro.razvan.rxjava.LearningRxJava.printSeparator
 import java.util.concurrent.TimeUnit
 
@@ -11,7 +10,7 @@ fun main() {
 
     /*
     An Observable can push data or events from virtually any source
-    In this case with the method just we are emitting a fixed set of items
+    In this case, with the method just, we are emitting a fixed set of items
     To make this observable actually push the five strings (which are now called emissions) we need an Observer to subscribe to it and receive the items.
      */
 

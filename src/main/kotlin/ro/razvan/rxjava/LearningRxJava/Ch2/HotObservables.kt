@@ -45,6 +45,9 @@ object HotObservables {
 
                     fxObservable.addListener(listener)
 
+                    //handle disposing by specifying cancellable
+                    emitter.setCancellable { fxObservable.removeListener(listener) }
+
                 }
 
             }

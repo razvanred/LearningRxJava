@@ -42,7 +42,9 @@ dependencies {
     compile group: 'io.reactivex.rxjava2', name: 'rxjavafx', version: '2.2.2'
     //ThreeTenBackport
     implementation group: 'org.threeten', name: 'threetenbp', version: threeTenBpVersion
-    
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: '27.0.1-jre'
+
 }
 
 compileKotlin {

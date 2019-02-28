@@ -1,6 +1,7 @@
 package ro.razvan.rxjava.LearningRxJava.Ch3
 
 import io.reactivex.Observable
+import io.reactivex.functions.Consumer
 import ro.razvan.rxjava.LearningRxJava.printSeparator
 import java.util.concurrent.TimeUnit
 
@@ -261,11 +262,11 @@ object Scan {
     fun main(args: Array<String>) {
 
         Observable.just(1, 2, 3, 4)
-            .scan { acc, act -> acc + act }
+            .scan(10) { acc, act -> acc + act } // we can specify an initial value, the default initial value is 0
             .subscribe(::println)
 
         /*
-        OUTPUT:
+        OUTPUT (with 0 as initial value):
         1
         3
         6
@@ -275,11 +276,11 @@ object Scan {
         printSeparator()
 
         Observable.just(1, 2, 3, 4)
-            .reduce { acc, act -> acc + act }
-            .subscribe(::println)
+            .reduce(10) { acc, act -> acc + act }
+            .subscribe(Consumer(::println))
 
         /*
-        OUTPUT: 10
+        OUTPUT: 20
          */
     }
 

@@ -35,6 +35,20 @@ object Merge {
         source1.mergeWith(source2)
             .subscribe(::println)
 
+        /*
+        OUTPUT:
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+         */
+
         printSeparator()
 
         /*
@@ -103,6 +117,20 @@ object FlatMap {
 
         source.flatMap { t: String -> Observable.fromIterable(t.toCharArray().toList()) }
             .subscribe(::println)
+
+        /*
+        OUTPUT:
+        R
+        a
+        z
+        v
+        a
+        n
+        R
+        o
+        s
+        u
+         */
 
         printSeparator()
 

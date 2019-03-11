@@ -34,7 +34,7 @@ fun main() {
     TODO understand the difference between Java Streams/Kotlin sequences and Observables
     In the example below I push a consecutive Long at each specified time interval
     This Long emission is not only data, but also an event
-    I had to put to sleep the main thread in order to fire all the emissions on the computation thread
+    I had to put to sleepThread the main thread in order to fire all the emissions on the computation thread
      */
 
     printSeparator()

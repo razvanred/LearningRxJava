@@ -35,7 +35,7 @@ object ExplicitDispose {
         disposable.dispose()
         println("Disposable disposed!")
 
-        Thread.sleep(5000) // sleep 5 seconds to prove that there are no more emissions
+        Thread.sleep(5000) // sleepThread 5 seconds to prove that there are no more emissions
 
     }
 

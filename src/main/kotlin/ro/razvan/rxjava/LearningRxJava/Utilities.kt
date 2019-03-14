@@ -5,3 +5,7 @@ fun printSeparator(length: Int = 10) {
         print("-")
     print("\n")
 }
+
+fun javaSleep(millis: Long) {
+    Thread.sleep(millis)
+}

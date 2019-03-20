@@ -9,3 +9,7 @@ fun printSeparator(length: Int = 10) {
 fun javaSleep(millis: Long) {
     Thread.sleep(millis)
 }
+
+fun println(message: Any?) {
+    kotlin.io.println(message)
+}

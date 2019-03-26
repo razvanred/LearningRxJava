@@ -1,5 +1,8 @@
 package ro.razvan.rxjava.LearningRxJava
 
+import java.io.BufferedWriter
+import java.io.File
+import java.io.FileWriter
 import kotlin.random.Random
 
 fun printSeparator(length: Int) {
@@ -31,4 +34,25 @@ fun printSeparator() {
 
 fun println(message: Any?) {
     kotlin.io.println(message)
+}
+
+fun writeOnFile(text: String, path: String) {
+
+    var writer: BufferedWriter? = null
+
+    try {
+
+        writer = BufferedWriter(FileWriter(File(path)))
+        writer.append(text)
+
+    } catch (exc: Exception) {
+
+        exc.printStackTrace()
+
+    } finally {
+
+        writer?.close()
+
+    }
+
 }

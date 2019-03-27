@@ -56,3 +56,44 @@ fun writeOnFile(text: String, path: String) {
     }
 
 }
+
+object UsersApi {
+
+    fun getUser(): String {
+
+        Thread.sleep(5_000)
+
+        return "{\n" +
+                "  \"posts\": [\n" +
+                "    {\n" +
+                "      \"id\": 1,\n" +
+                "      \"title\": \"Post 1\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"id\": 2,\n" +
+                "      \"title\": \"Post 2\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"id\": 3,\n" +
+                "      \"title\": \"Post 3\"\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"comments\": [\n" +
+                "    {\n" +
+                "      \"id\": 1,\n" +
+                "      \"body\": \"some comment\",\n" +
+                "      \"postId\": 1\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"id\": 2,\n" +
+                "      \"body\": \"some comment\",\n" +
+                "      \"postId\": 1\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"profile\": {\n" +
+                "    \"name\": \"typicode\"\n" +
+                "  }\n" +
+                "}"
+    }
+
+}

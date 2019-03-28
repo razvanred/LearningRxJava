@@ -3,9 +3,9 @@ package ro.razvan.rxjava.LearningRxJava.Ch6
 import io.reactivex.Observable
 import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers
+import ro.razvan.rxjava.LearningRxJava.intenseCalculation
 import ro.razvan.rxjava.LearningRxJava.printSeparator
 import java.util.concurrent.TimeUnit
-import kotlin.random.Random
 
 /*
 You have to complete different tasks. You would be faster if you called a friend to help you.
@@ -136,11 +136,6 @@ private fun withoutConcurrency() {
     If we fire both Observables at the same time rather than waiting for one to complete before starting the other, we could get this operation done much more quickly.
      */
 
-}
-
-private fun <T> intenseCalculation(value: T): T {
-    Thread.sleep(Random.nextLong(3_000))
-    return value
 }
 
 object KeepApplicationAliveWithSleep {
